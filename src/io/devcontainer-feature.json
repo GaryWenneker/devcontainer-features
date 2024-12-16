@@ -1,0 +1,10 @@
+{
+    "name": "iO Scripts",
+    "id": "io",
+    "version": "1.0.0",
+    "description": "iO DevContainer scripts",
+    "options": {},
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
