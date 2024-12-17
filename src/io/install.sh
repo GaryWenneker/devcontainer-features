@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-echo "Activating feature 'hello'"
+echo "Activating feature 'iO'"
 
 GREETING=${GREETING:-undefined}
 echo "The provided greeting is: $GREETING"
@@ -18,7 +18,7 @@ echo "The effective dev container remoteUser's home directory is '$_REMOTE_USER_
 echo "The effective dev container containerUser is '$_CONTAINER_USER'"
 echo "The effective dev container containerUser's home directory is '$_CONTAINER_USER_HOME'"
 
-cat > /usr/local/bin/hello \
+cat > /usr/local/bin/io \
 << EOF
 #!/bin/sh
 RED='\033[0;91m'
@@ -26,4 +26,4 @@ NC='\033[0m' # No Color
 echo "\${RED}${GREETING}, \$(whoami)!\${NC}"
 EOF
 
-chmod +x /usr/local/bin/hello
+chmod +x /usr/local/bin/io
