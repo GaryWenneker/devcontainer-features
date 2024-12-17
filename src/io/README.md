@@ -1,5 +1,5 @@
 
-# Hello, World! (hello)
+# Hello, World! (io)
 
 A hello world feature
 
@@ -21,4 +21,4 @@ A hello world feature
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/GaryWenneker/devcontainer-features/blob/main/src/hello/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/GaryWenneker/devcontainer-features/blob/main/src/io/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
