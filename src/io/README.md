@@ -1,7 +1,7 @@
 
-# Hello, World! (io)
+# iO Stuff (io)
 
-A hello world feature
+Funny iO stuff
 
 ## Example Usage
 
@@ -15,7 +15,7 @@ A hello world feature
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| greeting | Select a pre-made greeting, or enter your own | string | hey |
+
 
 
 
