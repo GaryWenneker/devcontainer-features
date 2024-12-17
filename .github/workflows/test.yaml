@@ -14,6 +14,7 @@ jobs:
       matrix:
         features:
           - color
+          - io
           - hello
         baseImage:
           - debian:latest
@@ -35,6 +36,7 @@ jobs:
       matrix:
         features:
           - color
+          - io
           - hello
     steps:
       - uses: actions/checkout@v4
