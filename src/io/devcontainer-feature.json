@@ -1,7 +1,7 @@
 {
     "name": "iO Stuff",
     "id": "io",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Funny iO stuff",
     "options": {},
     "installsAfter": [

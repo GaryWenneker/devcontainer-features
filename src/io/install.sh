@@ -20,15 +20,25 @@ echo "The effective dev container remoteUser's home directory is '$_REMOTE_USER_
 echo "The effective dev container containerUser is '$_CONTAINER_USER'"
 echo "The effective dev container containerUser's home directory is '$_CONTAINER_USER_HOME'"
 
-cat > /usr/local/bin/gary1 \
-<< EOF
-#!/bin/sh
-RED='\033[0;91m'
-NC='\033[0m' # No Color
-echo "\${RED}iO!\${NC}"
-EOF
+if command -v apt-get >/dev/null 2>&1; then
+    apt-get update
+    apt-get install -y git
+elif command -v yum >/dev/null 2>&1; then
+    yum install -y git
+else
+    echo "Cannot find supported package manager"
+    exit 1
+fi
 
-chmod +x /usr/local/bin/gary1
+# cat > /usr/local/bin/gary1 \
+# << EOF
+# #!/bin/sh
+# RED='\033[0;91m'
+# NC='\033[0m' # No Color
+# echo "\${RED}iO!\${NC}"
+# EOF
+
+# chmod +x /usr/local/bin/gary1
 
 
 if command -v apt-get >/dev/null 2>&1; then
@@ -48,11 +58,11 @@ pushd $TMP_DIR
 
 
 git clone --depth 1 https://github.com/GaryWenneker/devcontainer-scripts.git
-cp devcontainer-scripts/ssh-setup.sh /usr/local/bin/
+# cp devcontainer-scripts/ssh-setup.sh /usr/local/bin/
 
-chmod +x /usr/local/bin//ssh-setup.sh
+# chmod +x /usr/local/bin//ssh-setup.sh
 
-popd
-rm -rf $TMP_DIR
+# popd
+# rm -rf $TMP_DIR
 
-echo "Feature 'iO' activated"
+# echo "Feature 'iO' activated"
