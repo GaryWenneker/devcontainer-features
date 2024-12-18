@@ -23,7 +23,7 @@ cat > /usr/local/bin/gary \
 #!/bin/sh
 RED='\033[0;91m'
 NC='\033[0m' # No Color
-echo "\${RED}${GREETING}, \$(whoami)!\${NC}"
+echo "\${RED}iO!\${NC}"
 EOF
 
 chmod +x /usr/local/bin/gary
