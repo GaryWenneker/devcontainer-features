@@ -46,8 +46,9 @@ TMP_DIR=/tmp/symbiotic
 mkdir --parents $TMP_DIR
 pushd $TMP_DIR
 
-git clone --depth 1 https://gitlab.hosted-tools.com/netherlands/symbiotic.git
-cp scripts/onboarding/ssh-setup.sh /usr/local/bin/
+
+git clone --depth 1 https://github.com/GaryWenneker/devcontainer-scripts.git
+cp devcontainer-scripts/ssh-setup.sh /usr/local/bin/
 
 chmod +x /usr/local/bin//ssh-setup.sh
 
