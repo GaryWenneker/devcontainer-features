@@ -1,5 +1,7 @@
 #!/bin/sh
+
 set -e
+set -u
 
 echo "Activating feature 'iO'"
 
@@ -27,3 +29,29 @@ echo "\${RED}iO!\${NC}"
 EOF
 
 chmod +x /usr/local/bin/gary
+
+
+if command -v apt-get >/dev/null 2>&1; then
+    apt-get update
+    apt-get install -y git
+elif command -v yum >/dev/null 2>&1; then
+    yum install -y git
+else
+    echo "Cannot find supported package manager"
+    exit 1
+fi
+
+TMP_DIR=/tmp/symbiotic
+
+mkdir --parents $TMP_DIR
+pushd $TMP_DIR
+
+git clone --depth 1 https://gitlab.hosted-tools.com/netherlands/symbiotic.git
+cp scripts/onboarding/ssh-setup.sh /usr/local/bin/
+
+chmod +x /usr/local/bin//ssh-setup.sh
+
+popd
+rm -rf $TMP_DIR
+
+echo "Feature 'iO' activated"
